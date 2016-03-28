@@ -6,9 +6,8 @@
 	{
 		"frame": false,
 		"transparent": true,
-		"width": 500,
-		"height": 400,
-		"resizable": false,
+		"width": 800,
+		"resizable": true,
 		"icon": "icon.png"
 	} 
 }

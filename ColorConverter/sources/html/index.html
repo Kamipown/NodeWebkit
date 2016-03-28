@@ -7,7 +7,7 @@
 	</head>
 
 	<body onload="Ui.init()">
-		<div id="main_div">
+		<div id="window">
 			<header id="main_header">
 				<svg x="0px" y="0px" viewBox="0 0 388.588 388.588">
 					<path id="logo" d="M194.294,4.607c-12.008,23.937-21.645,38.249-40.896,63.881C114.531,120.232,45.802,175.686,45.802,240.096
@@ -22,9 +22,69 @@
 				</nav>
 			</header>
 
-			<section id="main_section">
-				
-			</section>
+			<div id="main_div">
+				<div id="inputs_div">
+					<section id="rgb_section">
+						<h2>RGB</h2>
+						<div>
+							<span>R</span>
+							<input id="" type="range" min="0" max="255"/>
+							<input id="" type="text" value="0"/>
+						</div>
+						<div>
+							<span>G</span>
+							<input id="" type="range" min="0" max="255"/>
+							<input id="" type="text" value="0"/>
+						</div>
+						<div>
+							<span>B</span>
+							<input id="" type="range" min="0" max="255"/>
+							<input id="" type="text" value="0"/>
+						</div>
+					</section>
+
+					<section id="hex_section">
+						<h2>HEXA</h2>
+						<div>
+							<span>R</span>
+							<input id="" type="range" min="0" max="255"/>
+							<input id="" type="text" value="0"/>
+						</div>
+						<div>
+							<span>G</span>
+							<input id="" type="range" min="0" max="255"/>
+							<input id="" type="text" value="0"/>
+						</div>
+						<div>
+							<span>B</span>
+							<input id="" type="range" min="0" max="255"/>
+							<input id="" type="text" value="0"/>
+						</div>
+					</section>
+
+					<section id="hsl_section">
+						<h2>HSL</h2>
+						<div>
+							<span>H</span>
+							<input id="" type="range" min="0" max="359"/>
+							<input id="" type="text" value="0"/>
+						</div>
+						<div>
+							<span>S</span>
+							<input id="" type="range" min="0" max="100"/>
+							<input id="" type="text" value="0"/>
+						</div>
+						<div>
+							<span>L</span>
+							<input id="" type="range" min="0" max="100"/>
+							<input id="" type="text" value="0"/>
+						</div>
+					</section>
+				</div>
+				<div id="preview_div">
+					
+				</div>
+			</div>
 		</div>
 		<script type="text/javascript" src="../js/index.js"></script>
 	</body>
