@@ -1,5 +1,10 @@
 {
 	"name": "color-picker",
 	"version": "0.0.1",
-	"main": "sources/html/index.html"
+	"main": "sources/html/index.html",
+	"window":
+	{
+		"frame": false,
+		"transparent": true
+	} 
 }
