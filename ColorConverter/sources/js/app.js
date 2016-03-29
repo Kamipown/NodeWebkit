@@ -29,14 +29,16 @@ var App =
 
 	init: function()
 	{
-		this.rgb_clipboard.onclick = this.clipboard(this.rgb_result);
-		this.hex_clipboard.onclick = this.clipboard(this.hex_result);
-		this.hsl_clipboard.onclick = this.clipboard(this.hsl_result);
+
+	},
+
+	select_result: function(result)
+	{
+		result.select();
 	},
 
 	clipboard: function(result)
 	{
-		result.focus();
 		result.select();
 		document.execCommand("copy");
 	}

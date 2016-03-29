@@ -42,8 +42,8 @@
 							<input id="rgb_b_text" type="text" value="0"/>
 						</div>
 						<div class="input_result">
-							<input id="rgb_result" type="text" value="rgb(0, 0, 0)"/>
-							<span id="rgb_clipboard"></span>
+							<input id="rgb_result" onclick="App.select_result(this)" type="text" value="rgb(0, 0, 0)"/>
+							<span id="rgb_clipboard" onclick="App.clipboard(App.rgb_result)"></span>
 						</div>
 					</section>
 
@@ -65,8 +65,8 @@
 							<input id="hex_b_text" type="text" value="0"/>
 						</div>
 						<div class="input_result">
-							<input id="hex_result" type="text" value="#000000"/>
-							<span id="hex_clipboard"></span>
+							<input id="hex_result" onclick="App.select_result(this)" type="text" value="#000000"/>
+							<span id="hex_clipboard" onclick="App.clipboard(App.hex_result)"></span>
 						</div>
 					</section>
 
@@ -88,8 +88,8 @@
 							<input id="hsl_l_text" type="text" value="0"/>
 						</div>
 						<div class="input_result">
-							<input id="hsl_result" type="text" value="hsl(0, 0, 0)"/>
-							<span id="hsl_clipboard"></span>
+							<input id="hsl_result" onclick="App.select_result(this)" type="text" value="hsl(0, 0, 0)"/>
+							<span id="hsl_clipboard" onclick="App.clipboard(App.hsl_result)"></span>
 						</div>
 					</section>
 				</div>
