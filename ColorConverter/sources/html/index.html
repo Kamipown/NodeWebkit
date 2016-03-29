@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="../css/index.css"/>
 	</head>
 
-	<body onload="Ui.init()">
+	<body onload="Ui.init(); App.init();">
 		<div id="window">
 			<header id="main_header">
 				<svg x="0px" y="0px" viewBox="0 0 388.588 388.588">
@@ -28,22 +28,22 @@
 						<h2>RGB</h2>
 						<div class="input_group">
 							<span>R</span>
-							<input id="" type="range" min="0" max="255"/>
-							<input id="" type="text" value="0"/>
+							<input id="rgb_r_range" type="range" min="0" max="255"/>
+							<input id="rgb_r_text" type="text" value="0"/>
 						</div>
 						<div class="input_group">
 							<span>G</span>
-							<input id="" type="range" min="0" max="255"/>
-							<input id="" type="text" value="0"/>
+							<input id="rgb_g_range" type="range" min="0" max="255"/>
+							<input id="rgb_g_text" type="text" value="0"/>
 						</div>
 						<div class="input_group">
 							<span>B</span>
-							<input id="" type="range" min="0" max="255"/>
-							<input id="" type="text" value="0"/>
+							<input id="rgb_b_range" type="range" min="0" max="255"/>
+							<input id="rgb_b_text" type="text" value="0"/>
 						</div>
 						<div class="input_result">
-							<input id="aaa" type="text" value="rgb(0, 0, 0)"/>
-							<span id=""></span>
+							<input id="rgb_result" type="text" value="rgb(0, 0, 0)"/>
+							<span id="rgb_clipboard"></span>
 						</div>
 					</section>
 
@@ -51,22 +51,22 @@
 						<h2>HEXA</h2>
 						<div class="input_group">
 							<span>R</span>
-							<input id="" type="range" min="0" max="255"/>
-							<input id="" type="text" value="0"/>
+							<input id="hex_r_range" type="range" min="0" max="255"/>
+							<input id="hex_r_text" type="text" value="0"/>
 						</div>
 						<div class="input_group">
 							<span>G</span>
-							<input id="" type="range" min="0" max="255"/>
-							<input id="" type="text" value="0"/>
+							<input id="hex_g_range" type="range" min="0" max="255"/>
+							<input id="hex_g_text" type="text" value="0"/>
 						</div>
 						<div class="input_group">
 							<span>B</span>
-							<input id="" type="range" min="0" max="255"/>
-							<input id="" type="text" value="0"/>
+							<input id="hex_b_range" type="range" min="0" max="255"/>
+							<input id="hex_b_text" type="text" value="0"/>
 						</div>
 						<div class="input_result">
-							<input id="" type="text" value="#000000"/>
-							<span id=""></span>
+							<input id="hex_result" type="text" value="#000000"/>
+							<span id="hex_clipboard"></span>
 						</div>
 					</section>
 
@@ -74,30 +74,28 @@
 						<h2>HSL</h2>
 						<div class="input_group">
 							<span>H</span>
-							<input id="" type="range" min="0" max="359"/>
-							<input id="" type="text" value="0"/>
+							<input id="hsl_h_range" type="range" min="0" max="255"/>
+							<input id="hsl_h_text" type="text" value="0"/>
 						</div>
 						<div class="input_group">
 							<span>S</span>
-							<input id="" type="range" min="0" max="100"/>
-							<input id="" type="text" value="0"/>
+							<input id="hsl_s_range" type="range" min="0" max="255"/>
+							<input id="hsl_s_text" type="text" value="0"/>
 						</div>
 						<div class="input_group">
 							<span>L</span>
-							<input id="" type="range" min="0" max="100"/>
-							<input id="" type="text" value="0"/>
+							<input id="hsl_l_range" type="range" min="0" max="255"/>
+							<input id="hsl_l_text" type="text" value="0"/>
 						</div>
 						<div class="input_result">
-							<input id="" type="text" value="hsl(0, 0, 0)"/>
-							<span id=""></span>
+							<input id="hsl_result" type="text" value="hsl(0, 0, 0)"/>
+							<span id="hsl_clipboard"></span>
 						</div>
 					</section>
 				</div>
-				<div id="preview_div">
-					
-				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="../js/index.js"></script>
+		<script type="text/javascript" src="../js/ui.js"></script>
+		<script type="text/javascript" src="../js/app.js"></script>
 	</body>
 </html>

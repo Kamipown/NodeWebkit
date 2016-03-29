@@ -21,12 +21,6 @@ var Ui =
 		}
 
 		this.update_logo_color(1);
-		this.show_window();
-	},
-
-	show_window: function()
-	{
-		this.window.show();
 	},
 
 	update_logo_color: function(c)
