@@ -1,9 +1,5 @@
 var App =
 {
-	rgb: {r: 10, g: 20, b: 30},
-	hex: {r: 0, g: 0, b: 0},
-	hsl: {h: 0, s: 0, l: 0},
-
 	rgb_r_range: document.getElementById("rgb_r_range"),
 	rgb_g_range: document.getElementById("rgb_g_range"),
 	rgb_b_range: document.getElementById("rgb_b_range"),
@@ -30,12 +26,14 @@ var App =
 
 	init: function()
 	{
-		this.rgb_r_range.value = this.rgb.r;
-		this.rgb_g_range.value = this.rgb.g;
-		this.rgb_b_range.value = this.rgb.b;
-		this.rgb_r_text.value = this.rgb.r;
-		this.rgb_g_text.value = this.rgb.g;
-		this.rgb_b_text.value = this.rgb.b;
+		this.rgb_r_range.value = 204;
+		this.rgb_g_range.value = 85;
+		this.rgb_b_range.value = 85;
+		this.rgb_r_text.value = 204;
+		this.rgb_g_text.value = 85;
+		this.rgb_b_text.value = 85;
+
+		this.update_rgb();
 	},
 
 	rgb_r_range_change: function()
@@ -192,10 +190,5 @@ var App =
 	{
 		this.select_elem(result);
 		document.execCommand("copy");
-	},
-
-	debug: function(txt)
-	{
-		document.getElementById("debug").innerHTML = txt;
 	}
 }
