@@ -14,13 +14,13 @@ body { height: 100%; margin: 0px; color: #333; font-family: OpenSans-Regular; fo
 		#minimize:hover { color: #09f!important;}
 		#close:hover { color: #f55!important;}
 
-#main_div { display: block; width: 100%; height: calc(100% - 32px); background: #c55;}
+#main_div { display: block; width: 100%; height: calc(100% - 32px); background-color: #c55;}
 	#inputs_div { display: block; box-sizing: border-box; width: 100%; border-bottom: 1px solid #aaa; border-radius: 0px 0px 10px 10px; background: #eee; box-shadow: 0px 0px 4px #000;}
 		#inputs_div section { display: inline-block; vertical-align: top; width: calc(33.333% - 40px); margin: 10px 20px;}
 			#inputs_div section h2 { display: block; height: 30px; line-height: 30px; margin: 0px 0px 20px 0px; border-bottom: 1px solid #ccc; font-size: 14px;}
 			#inputs_div section .input_group { display: block;}
 				#inputs_div section .input_group span { display: inline-block; vertical-align: top; width: 20px; height: 40px; line-height: 40px; font-size: 14px;}
-				#inputs_div section .input_group input[type=range] { display: inline-block; box-sizing: border-box; vertical-align: top; width: calc(100% - 80px); height: 40px; margin: 0px 10px 0px 0px; padding: 0px;}
+				#inputs_div section .input_group input[type=range] { display: inline-block; box-sizing: border-box; vertical-align: top; width: calc(100% - 80px); height: 40px; margin: 0px 10px 0px 0px; padding: 0px; outline: none;}
 				#inputs_div section .input_group input[type=text] { display: inline-block; box-sizing: border-box; vertical-align: top; width: 50px; height: 30px; margin: 5px 0px; padding: 0px; border: 1px solid #ccc; background-color: #fafafa; text-align: center; color: #333; font-family: OpenSans-Regular; outline: none;}
 			#inputs_div section .input_result { display: block; margin: 20px 0px;}
 				#inputs_div section .input_result input[type=text] { display: inline-block; box-sizing: border-box; vertical-align: top; width: calc(100% - 50px); height: 30px; margin: 0px; padding: 0px; border: 1px solid #ccc; background-color: #fafafa; text-align: center; color: #333; font-family: OpenSans-Regular; outline: none;}
