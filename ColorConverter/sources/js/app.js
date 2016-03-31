@@ -119,7 +119,7 @@ var App =
 
 	hex_r_text_change: function()
 	{
-		
+
 	},
 
 	hex_g_text_change: function()
@@ -245,7 +245,22 @@ var App =
 
 	clipboard: function(result)
 	{
+		var clipboard_span = document.getElementById("clipboard_span");
+
 		this.select_elem(result);
 		document.execCommand("copy");
+
+		if (Number(this.rgb_r_text.value) + Number(this.rgb_g_text.value) + Number(this.rgb_b_text.value) > 500)
+		{
+			clipboard_span.style.color = "#000";
+			clipboard_span.style.textShadow = "none";
+		}
+		else
+		{
+			clipboard_span.style.color = "#fff";
+			clipboard_span.style.textShadow = "1px 1px 1px #000";
+		}
+		clipboard_span.style.bottom = "16px";
+		setTimeout(function(){clipboard_span.style.bottom = "-32px";}, 1000);
 	}
 }
