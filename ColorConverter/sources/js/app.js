@@ -96,11 +96,57 @@ var App =
 			this.rgb_b_text.className = "incorrect";
 	},
 
+	hex_r_range_change: function()
+	{
+		this.hex_r_text.value = this.to_hex(this.hex_r_range.value);
+		this.hex_r_text.className = "";
+		this.update_hex();
+	},
+
+	hex_g_range_change: function()
+	{
+		this.hex_g_text.value = this.to_hex(this.hex_g_range.value);
+		this.hex_g_text.className = "";
+		this.update_hex();
+	},
+
+	hex_b_range_change: function()
+	{
+		this.hex_b_text.value = this.to_hex(this.hex_b_range.value);
+		this.hex_b_text.className = "";
+		this.update_hex();
+	},
+
+	hex_r_text_change: function()
+	{
+		
+	},
+
+	hex_g_text_change: function()
+	{
+
+	},
+
+	hex_b_text_change: function()
+	{
+
+	},
+
 	update_rgb: function()
 	{
 		if (document.querySelectorAll("#rgb_section .incorrect").length == 0)
 		{
 			this.update_hex_from_rgb();
+			this.update_hsl_from_rgb();
+			this.update_results();
+		}
+	},
+
+	update_hex: function()
+	{
+		if (document.querySelectorAll("#hex_section .incorrect").length == 0)
+		{
+			this.update_rgb_from_hex();
 			this.update_hsl_from_rgb();
 			this.update_results();
 		}
@@ -160,9 +206,20 @@ var App =
 				h += 360;
 		}
 
-		this.hsl_h_range.value = this.hsl_h_text.value = h;
-		this.hsl_s_range.value = this.hsl_s_text.value = s;
-		this.hsl_l_range.value = this.hsl_l_text.value = l;
+		this.hsl_h_text.value = this.hsl_h_range.value = h;
+		this.hsl_s_text.value = this.hsl_s_range.value = s;
+		this.hsl_l_text.value = this.hsl_l_range.value = l;
+	},
+
+	update_rgb_from_hex: function()
+	{
+		this.rgb_r_range.value = this.hex_r_range.value;
+		this.rgb_g_range.value = this.hex_g_range.value;
+		this.rgb_b_range.value = this.hex_b_range.value;
+
+		this.rgb_r_text.value = this.hex_r_range.value;
+		this.rgb_g_text.value = this.hex_g_range.value;
+		this.rgb_b_text.value = this.hex_b_range.value;
 	},
 
 	update_results: function()

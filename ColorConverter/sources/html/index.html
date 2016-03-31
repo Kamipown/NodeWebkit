@@ -51,18 +51,18 @@
 						<h2>HEXA</h2>
 						<div class="input_group">
 							<span>R</span>
-							<input id="hex_r_range" type="range" min="0" max="255"/>
-							<input id="hex_r_text" type="text" value="0"/>
+							<input id="hex_r_range" oninput="App.hex_r_range_change()" type="range" min="0" max="255"/>
+							<input id="hex_r_text" oninput="App.hex_r_text_change()" onclick="App.select_elem(this)" type="text" value="0"/>
 						</div>
 						<div class="input_group">
 							<span>G</span>
-							<input id="hex_g_range" type="range" min="0" max="255"/>
-							<input id="hex_g_text" type="text" value="0"/>
+							<input id="hex_g_range" oninput="App.hex_g_range_change()" type="range" min="0" max="255"/>
+							<input id="hex_g_text" oninput="App.hex_g_text_change()" onclick="App.select_elem(this)" type="text" value="0"/>
 						</div>
 						<div class="input_group">
 							<span>B</span>
-							<input id="hex_b_range" type="range" min="0" max="255"/>
-							<input id="hex_b_text" type="text" value="0"/>
+							<input id="hex_b_range" oninput="App.hex_b_range_change()" type="range" min="0" max="255"/>
+							<input id="hex_b_text" oninput="App.hex_b_text_change()" onclick="App.select_elem(this)" type="text" value="0"/>
 						</div>
 						<div class="input_result">
 							<input id="hex_result" onclick="App.select_elem(this)" type="text" value="#000000"/>
@@ -74,17 +74,17 @@
 						<h2>HSL</h2>
 						<div class="input_group">
 							<span>H</span>
-							<input id="hsl_h_range" type="range" min="0" max="255"/>
+							<input id="hsl_h_range" type="range" min="0" max="360"/>
 							<input id="hsl_h_text" type="text" value="0"/>
 						</div>
 						<div class="input_group">
 							<span>S</span>
-							<input id="hsl_s_range" type="range" min="0" max="255"/>
+							<input id="hsl_s_range" type="range" min="0" max="100"/>
 							<input id="hsl_s_text" type="text" value="0"/>
 						</div>
 						<div class="input_group">
 							<span>L</span>
-							<input id="hsl_l_range" type="range" min="0" max="255"/>
+							<input id="hsl_l_range" type="range" min="0" max="100"/>
 							<input id="hsl_l_text" type="text" value="0"/>
 						</div>
 						<div class="input_result">
