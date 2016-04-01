@@ -42,7 +42,7 @@
 							<input id="rgb_b_text" oninput="App.rgb_b_text_change()" onclick="App.select_elem(this)" type="text" value="0"/>
 						</div>
 						<div class="input_result">
-							<input id="rgb_result" onclick="App.select_elem(this)" type="text" value="rgb(0, 0, 0)"/>
+							<input id="rgb_result" oninput="App.rgb_result_change()" onclick="App.select_elem(this)" type="text" value="rgb(0, 0, 0)"/>
 							<span id="rgb_clipboard" onclick="App.clipboard(App.rgb_result)"></span>
 						</div>
 					</section>

@@ -96,6 +96,35 @@ var App =
 			this.rgb_b_text.className = "incorrect";
 	},
 
+	rgb_result_change: function()
+	{
+		var rgb = rgb_result.value;
+		var r = "";
+		var g = "";
+		var b = "";
+		var i = 0;
+
+		while (rgb[i] && !(this.is_numeric(rgb[i])))
+			++i;
+		while (rgb[i] && this.is_numeric(rgb[i]))
+			r += rgb[i++];
+		while (rgb[i] && !(this.is_numeric(rgb[i])))
+			++i;
+		while (rgb[i] && this.is_numeric(rgb[i]))
+			g += rgb[i++];
+		while (rgb[i] && !(this.is_numeric(rgb[i])))
+			++i;
+		while (rgb[i] && this.is_numeric(rgb[i]))
+			b += rgb[i++];
+
+		if (r.length && g.length && b.length && Number(r) >= 0 && Number(g) >= 0 && Number(b) >= 0)
+		{
+
+		}
+		else
+			this.rgb_result.className = "";
+	},
+
 	hex_r_range_change: function()
 	{
 		this.hex_r_text.value = this.to_hex(this.hex_r_range.value);
@@ -406,6 +435,14 @@ var App =
 			return (Math.floor(n));
 		else
 			return (Math.floor(n) + 1);
+	},
+
+	is_numeric: function(n)
+	{
+		if (Number(n) >= 0 && Number(n) <= 9 && n != ' ')
+			return (true);
+		else
+			return (false);
 	},
 
 	select_elem: function(elem)
