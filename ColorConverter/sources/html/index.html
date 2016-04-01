@@ -15,7 +15,7 @@
 						z M179.478,358.77c-5.521,0-10-4.478-10-10c0-5.521,4.479-10,10-10c63.021,0,114.292-51.271,114.292-114.291
 						c0-5.521,4.479-10,10-10s10,4.479,10,10C313.771,298.525,253.526,358.77,179.478,358.77z"/>
 				</svg>
-				<h1>Color Converter</h1>
+				<h1>Color Converter <span id="lol"></span></h1>
 				<nav id="main_nav">
 					<span id="minimize">-</span>
 					<span id="close">x</span>
@@ -74,18 +74,18 @@
 						<h2>HSL</h2>
 						<div class="input_group">
 							<span>H</span>
-							<input id="hsl_h_range" type="range" min="0" max="360"/>
-							<input id="hsl_h_text" type="text" value="0"/>
+							<input id="hsl_h_range" oninput="App.hsl_h_range_change()" type="range" min="0" max="359"/>
+							<input id="hsl_h_text" oninput="App.hsl_h_text_change()" onclick="App.select_elem(this)" type="text" value="0"/>
 						</div>
 						<div class="input_group">
 							<span>S</span>
-							<input id="hsl_s_range" type="range" min="0" max="100"/>
-							<input id="hsl_s_text" type="text" value="0"/>
+							<input id="hsl_s_range" oninput="App.hsl_s_range_change()" type="range" min="0" max="100"/>
+							<input id="hsl_s_text" oninput="App.hsl_s_text_change()" onclick="App.select_elem(this)" type="text" value="0"/>
 						</div>
 						<div class="input_group">
 							<span>L</span>
-							<input id="hsl_l_range" type="range" min="0" max="100"/>
-							<input id="hsl_l_text" type="text" value="0"/>
+							<input id="hsl_l_range" oninput="App.hsl_l_range_change()" type="range" min="0" max="100"/>
+							<input id="hsl_l_text" oninput="App.hsl_l_text_change()" onclick="App.select_elem(this)" type="text" value="0"/>
 						</div>
 						<div class="input_result">
 							<input id="hsl_result" onclick="App.select_elem(this)" type="text" value="hsl(0, 0, 0)"/>
