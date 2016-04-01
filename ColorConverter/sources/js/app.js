@@ -117,12 +117,17 @@ var App =
 		while (rgb[i] && this.is_numeric(rgb[i]))
 			b += rgb[i++];
 
-		if (r.length && g.length && b.length && Number(r) >= 0 && Number(g) >= 0 && Number(b) >= 0)
+		if (r.length && g.length && b.length
+			&& Number(r) >= 0 && Number(g) >= 0 && Number(b) >= 0
+			&& Number(r) <= 255 && Number(g) <= 255 && Number(b) <= 255)
 		{
-
+			this.rgb_r_range.value = this.rgb_r_text.value = r;
+			this.rgb_g_range.value = this.rgb_g_text.value = g;
+			this.rgb_b_range.value = this.rgb_b_text.value = b;
+			this.update_rgb();
 		}
 		else
-			this.rgb_result.className = "";
+			this.rgb_result.className = "incorrect_result";
 	},
 
 	hex_r_range_change: function()
@@ -415,6 +420,10 @@ var App =
 
 	update_results: function()
 	{
+		var incorrect_results = document.querySelectorAll(".incorrect_result");
+		for (var i = 0; i < incorrect_results.length; ++i)
+			incorrect_results[i].className = "";
+
 		this.rgb_result.value = "rgb(" + this.rgb_r_text.value + ", " + this.rgb_g_text.value + ", " + this.rgb_b_text.value + ")";
 		this.hex_result.value = "#" + this.to_hex(this.hex_r_range.value) + this.to_hex(this.hex_g_range.value) + this.to_hex(this.hex_b_range.value);
 		this.hsl_result.value = "hsl(" + this.hsl_h_text.value + ", " + this.hsl_s_text.value + ", " + this.hsl_l_text.value + ")";
