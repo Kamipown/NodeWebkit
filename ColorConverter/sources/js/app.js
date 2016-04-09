@@ -214,7 +214,7 @@ var App =
 	hsl_h_text_change: function()
 	{
 		var n = Number(this.hsl_h_text.value);
-		if (n >= 0 && n <= 359 && this.hsl_h_text.value != "")
+		if (n >= 0 && n <= 360 && this.hsl_h_text.value != "")
 		{
 			this.hsl_h_text.className = "";
 			this.hsl_h_range.value = n;
